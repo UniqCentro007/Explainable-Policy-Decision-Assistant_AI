@@ -1,0 +1,11 @@
+.env
+.venv
+venv
+__pycache__
+*.pyc
+*.pyo
+.DS_Store
+policy-frontend/node_modules
+policy-frontend/dist
+policy-assistant/policy_vector_db
+policy-assistant/policies
