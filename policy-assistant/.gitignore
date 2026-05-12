@@ -2,3 +2,8 @@
 .env
 __pycache__/
 *.pyc
+
+echo "policy-assistant/policy_vector_db/*.sqlite3" >> .gitignore
+git add .gitignore
+git commit -m "Remove large DB file and ignore future commits"
+git push origin dev:dev
