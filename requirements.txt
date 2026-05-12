@@ -1,0 +1,23 @@
+# --- Core Backend ---
+fastapi==0.110.0
+uvicorn==0.27.1
+pydantic==2.6.3
+pydantic-core==2.16.3
+pydantic-settings==2.2.1
+python-dotenv==1.0.1
+groq==0.5.0
+python-multipart==0.0.9  # Added: Required for FastAPI login forms
+
+# --- Database & Security ---
+sqlalchemy==2.0.28
+pymysql==1.1.0
+cryptography==42.0.5
+passlib[bcrypt]==1.7.4   # Added: Required for secure password hashing
+
+# --- RAG (Retrieval-Augmented Generation) ---
+langchain==0.1.12
+langchain-community==0.0.28
+chromadb==0.4.24
+onnxruntime-directml==1.17.1
+sentence-transformers==2.6.1
+pypdf==4.1.0

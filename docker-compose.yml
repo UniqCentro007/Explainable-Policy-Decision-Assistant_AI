@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8080:8080"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - ANONYMIZED_TELEMETRY=False
+      - CHROMA_TELEMETRY_NOOP=True
+    volumes:
+      - ./policy-assistant/policies:/app/policies
+      - ./policy-assistant/policy_vector_db:/app/policy_vector_db
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_BASE_URL=http://backend:8080/api

@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #020617;
+  --color-brand-cyan: #06b6d4;
+}
+
+/* ... keep your existing keyframes here ... */
+
+@layer components {
+  .auth-container {
+    @apply min-h-screen w-full flex items-center justify-center p-6 relative overflow-hidden bg-[#020617];
+    background: radial-gradient(circle at center, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+  }
+
+  .auth-card {
+    @apply w-full max-w-md bg-slate-900/40 backdrop-blur-2xl border border-white/10 p-10 rounded-[3rem] shadow-2xl relative z-10;
+    animation: slide-up 0.8s ease-out;
+  }
+
+  .bg-cyber-grid {
+    background-image: 
+      linear-gradient(rgba(0, 238, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 238, 255, 0.03) 1px, transparent 1px);
+    background-size: 45px 45px;
+  }
+
+  .form-input { 
+    @apply w-full p-4 bg-slate-950 border border-white/10 rounded-2xl text-slate-300 outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all; 
+  }
+
+  .btn-primary { 
+    @apply w-full bg-cyan-500 text-slate-950 py-5 rounded-2xl font-black uppercase tracking-widest transition-all active:scale-[0.97] cursor-pointer shadow-[0_0_20px_rgba(6,182,212,0.2)]; 
+  }
+}
