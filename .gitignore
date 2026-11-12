@@ -1,0 +1,28 @@
+# Environment Variables & Secrets
+.env
+*.env
+
+# Python Virtual Environments & Cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+
+# Vector Database & Local SQLite/Chroma Artifacts
+policy_vector_db/
+*.sqlite3
+*.db
+
+# Node / React Frontend
+node_modules/
+policy-frontend/node_modules/
+policy-frontend/dist/
+policy-frontend/.vite/
+
+# OS & Editor Files
+.vscode/
+.DS_Store
+Thumbs.db
